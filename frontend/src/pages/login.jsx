@@ -15,11 +15,16 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
-
+  
     try {
       const res = await axios.post("http://localhost:5000/api/auth/login", formData);
+      
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("user", JSON.stringify({ name: res.data.name, role: res.data.role }));
+      
+      console.log("✅ User logged in, dispatching authChange event...");
+      window.dispatchEvent(new Event("authChange")); // ✅ Trigger navbar update
+  
       navigate("/dashboard"); // ✅ Redirect to dashboard after login
     } catch (err) {
       setError(err.response?.data?.msg || "Invalid Credentials");
@@ -33,7 +38,7 @@ const Login = () => {
         {error && <p className="auth-error">{error}</p>}
         <form className="auth-form" onSubmit={handleSubmit}>
           <input className="auth-input" type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
-          <input className="auth-input" type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} required />
+          <input className="auth-input" type="password" name="password" placeholder="Password" autocomplete="current-password" value={formData.password} onChange={handleChange} required />
           <button className="auth-button" type="submit">Login</button>
         </form>
         <p className="auth-footer">Don't have an account? <Link className="auth-link" to="/register">Register</Link></p>
