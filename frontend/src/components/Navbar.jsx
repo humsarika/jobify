@@ -59,7 +59,7 @@ export default function Navbar() {
 
             {dropdownOpen && (
               <div className="profile-dropdown">
-                <Link to="/profile" onClick={() => setDropdownOpen(false)}>View Profile</Link>
+                <Link to="/profile" onClick={() => setDropdownOpen(false)}>Profile</Link>
                 <Link to="/documents" onClick={() => setDropdownOpen(false)}>Your Documents</Link>
                 <button onClick={handleLogout} className="logout-btn">Logout</button>
               </div>

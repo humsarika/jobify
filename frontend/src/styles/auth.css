@@ -1,13 +1,21 @@
 :root {
-  --primary-color: #1f9fca;
-  --secondary-color: #06799f;
+  /* --a-color: #DDEB9D;
+  --b-color: #A0C878;
+  --c-color: #27667B;
+  --d-color: #143D60; */
+  --d-color: #A0C878;
+  --b-color: #27667B;
+  --c-color: #DDEB9D;
+  --a-color: #143D60;
+
   --danger-color: #e74c3c;
   --success-color: #2ecc71;
-  --dark-color: #495d86;
-  --white-color: #ecf0f1;
+  --warning-color: #f1c40f;
+  --info-color: #3498db;
+  --dark-color: #333;
   --container: #ffffffb5;
-  --dark2-color: #094a60;
 }
+
 
 /* Auth container - Centering */
 .auth-container {
@@ -15,7 +23,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: var(--success-color);
+  background-color: var(--container);
 }
 
 /* Auth Box */
@@ -49,13 +57,13 @@
   border-radius: 5px;
   font-size: 1rem;
   color: var(--dark2-color);
-  background-color: var(--white-color);
+  background-color: white;
 }
 
 /* Button */
 .auth-button {
-  background: var(--primary-color);
-  color: var(--white-color);
+  background: var(--a-color);
+  color: white;
   border: none;
   padding: 10px;
   font-size: 1rem;
@@ -65,7 +73,7 @@
 }
 
 .auth-button:hover {
-  background: var(--secondary-color);
+  background: var(--d-color);
 }
 
 /* Footer */
@@ -75,7 +83,7 @@
 }
 
 .auth-link {
-  color: var(--primary-color);
+  color: var(--a-color);
   text-decoration: none;
   font-weight: bold;
 }

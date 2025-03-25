@@ -1,0 +1,116 @@
+:root {
+    /* --a-color: #01204E;
+    --b-color: #028391;
+    --c-color: #F6DCAC;
+    --d-color: #FEAE6F; */
+  
+    --d-color: #A0C878;
+    --b-color: #27667B;
+    --c-color: #DDEB9D;
+    --a-color: #143D60;
+  
+    --danger-color: #e74c3c;
+    --success-color: #2ecc71;
+    --warning-color: #f1c40f;
+    --info-color: #3498db;
+    --dark-color: #333;
+  }
+/* Base styles */
+.profile-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    border-radius: 10px;
+  }
+  
+  /* Top Section - Profile Info */
+  .profile-header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  .profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgb(135, 129, 129); /* Placeholder */
+  }
+  .profile-info h1 {
+    margin: 0;
+    font-size: 1.8rem;
+  }
+  .profile-info .email {
+    color: var(--b-color);
+  }
+  
+  /* Middle Section - About */
+  .profile-about {
+    padding: 20px;
+    margin: 20px 50px;
+    border: none;
+    /* border-radius: 8px; */
+    background-color: #f9f9f9;
+  }
+  .profile-about strong {
+    font-size: 1.2rem;
+  }
+  
+  /* Bottom Section - Details & Social Links */
+  .profile-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+  .detail-item {
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 30px;
+    align-items: center;
+    padding: 20px;
+    /* margin: 0 25% 5% 0; */
+    border: none;
+    background: #fff;
+  }
+  .detail-item .retrived-data{
+    color: var(--a-color);
+    
+    padding: 0 20px;
+  }
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+  }
+  .social-link-item{
+    display: flex;
+    justify-content: space-between;
+    max-width: 50%;
+  }
+  .edit-btn {
+    background-color: transparent;
+    color:var(--a-color);
+    border: 1px solid var(--a-color);
+    padding: 5px 20px;
+    cursor: pointer;
+    border-radius: 1px;
+  }
+  .edit-btn:hover {
+    background-color: var(--a-color);
+    color: white;
+  }
+  
+  /* Responsive Tweaks */
+  @media (max-width: 768px) {
+    .profile-header {
+      flex-direction: column;
+      align-items: center;
+    }
+    .profile-details {
+      grid-template-columns: 1fr;
+    }
+  }
+  

@@ -4,6 +4,8 @@ import Login from "./pages/login";
 import Register from "./pages/register";
 import Dashboard from "./pages/dashboard";
 import Navbar from "./components/Navbar";
+import Profile from "./pages/profile";
+
 
 
 export default function App() {
@@ -16,6 +18,8 @@ export default function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/profile" element={<Profile />} />
+        {/* <Route path="/employerProfile" element={<EmployerProfile />} /> */}
       </Routes>
     </Router>
   );
